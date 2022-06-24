@@ -1,0 +1,14 @@
+pre{
+    font-size: 30px;
+    color: #808080;
+    word-spacing: 6px;
+    letter-spacing: 4px;
+    line-height: 60px;
+
+}
+ins+span {
+    text-decoration: overline;
+}
+.easy {
+    font-weight: 900;
+}
