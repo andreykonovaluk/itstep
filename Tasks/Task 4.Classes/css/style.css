@@ -6,9 +6,18 @@ pre{
     line-height: 60px;
 
 }
-ins+span {
+ins+span{
     text-decoration: overline;
 }
 .easy {
     font-weight: 900;
+}
+ins del{
+text-shadow: 2px 2px 4px orange;
+}
+ins .easy del{
+    font-size: 35px;
+}
+.power{
+    color: rgba(199, 26, 63, 0.3);
 }
