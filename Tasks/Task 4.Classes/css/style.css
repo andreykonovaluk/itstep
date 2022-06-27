@@ -21,3 +21,10 @@ ins .easy del{
 .power{
     color: rgba(199, 26, 63, 0.3);
 }
+.invisible{
+    opacity: 0;
+}
+.appearance:hover{
+    opacity: 1;
+    color: black;
+}
