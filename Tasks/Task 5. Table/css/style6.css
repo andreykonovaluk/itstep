@@ -1,0 +1,31 @@
+table{
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 5px solid #fff
+}
+td{
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 50px;
+    border: 1px solid #000;
+}
+.another{
+    color: rgba(128, 128, 128, 0.3);
+}
+.dayoff{
+    color: #f00;
+}
+.bday{
+    background-image: url(../img/HB.jpg);
+    background-size: cover;
+}
+.dteach{
+    background-image: url(../img/Dteach.jpg);
+    background-size: cover;
+}
+.hell{
+ background-image: url(../img/hell.jpg); 
+ background-size: cover;  
+}
