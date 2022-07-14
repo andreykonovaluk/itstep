@@ -1,0 +1,67 @@
+div{
+    position: relative;
+    float: left;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+    font-size: 30px;
+}
+.main{
+    width: 800px;
+    height: 1400px;
+    position: absolute;
+    left: calc(50% - 400px)
+}
+.logo{
+    width: 200px;
+    height: 200px;
+    background: #000;
+}
+.info{
+    width: 600px;
+    height: 200px;
+    margin-left: 200px;
+    margin-top: -200px;
+    background: #333;
+}
+.menu-header{
+    width: 200px;
+    height: 600px;
+    background: darkgreen;
+}
+.menu-stok{
+    width: 200px;
+    height: 200px;
+    margin-top: 600px;
+    margin-left: -200px;
+    background: aqua;
+}
+.products{
+    background: #ff7734;
+    width: 600px;
+    height: 800px;
+}
+.product{
+    width: 200px;
+    height: 200px;
+}
+
+.logo2{
+    width: 200px;
+    height: 400px;
+    background: #000;
+}
+.reviews{
+    width: 600px;
+    height: 200px;
+    background: rgb(116, 114, 114);
+    margin-top: -400px;
+    margin-left: 200px;
+}
+.socnet{
+    width: 600px;
+    height: 200px;
+    background: rgb(116, 114, 114);
+    margin-top: -200px;
+    margin-left: 200px;
+}

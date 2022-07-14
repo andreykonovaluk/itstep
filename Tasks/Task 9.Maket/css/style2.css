@@ -1,0 +1,123 @@
+div{
+    position: relative;
+    float: left;
+    text-align: center;
+    line-height: 100px;
+    color: #fff;
+    font-size: 30px;
+}
+.main{
+    width: 800px;
+    height: 700px;
+    position: absolute;
+    left: calc(50% - 400px)
+}
+.header{
+    width: 800px;
+    height: 200px;
+}
+.logo{
+    width: 200px;
+    height: 200px;
+    background: #000;
+}
+.header-info{
+    width: 600px;
+    height: 200px;
+}
+.info{
+    width: 200px;
+    height: 100px;
+    background: #333;
+}
+.posts{
+    width: 800px;
+    height: 300px;
+}
+.content-menu{
+    width: 200px;
+    height: 300px;
+}
+.menu1-header{
+    width: 200px;
+    height: 100px;
+    background: darkgreen;
+}
+.menu2-content{
+    width: 200px;
+    height: 100px;
+    background: rgb(0, 70, 0);
+}
+.menu3-footer{
+    width: 200px;
+    height: 100px;
+    background: rgb(0, 34, 0);
+}
+.content{
+    width: 600px;
+    height: 200px;
+}
+.picture{
+    width: 400px;
+    height: 200px;
+    background: aqua;
+}
+.header-products{
+    width: 200px;
+    height: 200px;
+}
+.product{
+    width: 200px;
+    height: 100px;
+    background: #ff7734;
+}
+.footer-posts{
+    width: 600px;
+    height: 100px;
+}
+.center-post{
+    width: 400px;
+    height: 100px;
+}
+.post{
+    width: 200px;
+    height: 100px;
+    background: rgb(0, 0, 129);
+}
+.footer{
+    width: 800px;
+    height: 200px;
+}
+.footer-logo{
+    width: 200px;
+    height: 200px;
+    background: violet;
+}
+.footer-info{
+    width: 400px;
+    height: 200px;
+}
+.reviews{
+    width: 400px;
+    height: 100px;
+    background: greenyellow;
+}
+.socnet{
+    width: 400px;
+    height: 100px;
+}
+.socnet-menu{
+    width: 200px;
+    height: 100px;
+    background: goldenrod;
+}
+.socnet-adress{
+    width: 200px;
+    height: 100px;
+    background: gold;
+}
+.footer-emblem{
+    width: 200px;
+    height: 200px;
+    background: silver;
+}
