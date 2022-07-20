@@ -1,0 +1,32 @@
+.container{
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.box{
+    height: 100%;
+    color: #fff;
+    background: #f00;
+    font-size: 50px;
+    line-height: 100px;
+    text-align: center;
+    margin-bottom: 10px;
+    
+}
+@media (min-width: 768px){
+    .box{
+        width: 33.3333333%;
+        position: relative;
+        float: left;
+    }
+}
+@media (min-width: 1024px){
+    .box{
+        width: 25%;
+    }
+}
+@media (min-width: 1280px){
+    .box{
+        width: 16.6666666%;
+    }
+}
