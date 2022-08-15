@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Common/normalize.css">
+    <link rel="stylesheet" href="../Common/grid.css">
+    <link rel="stylesheet" href="./css/style2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <form action="" method="post" name="reg_form" class="reg-form">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-label">
+                                <label for="FIO">ФИО:</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-control">
+                                <input type="text" name="FIO" id="FIO" value="" placeholder="Введите ФИО">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-label">
+                                <label for="email">Email:</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-control">
+                                <input type="email" name="email" id="email" value="" placeholder="Введите Email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-label">
+                                <label for="phone">Телефон:</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-control">
+                                <input type="text" name="phone" id="phone" value="" placeholder="Введите телефон">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-label">
+                                <label for="password">Пароль:</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-control">
+                                <input type="password" name="password" id="password" value="" placeholder="Введите пароль">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-label">
+                                <label for="dob">Дата рождения:</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-control">
+                                <input type="date" name="dob" id="dob" value="" placeholder="Введите дату рождения">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-label">
+                                <span>Хобби:</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-control">
+                                <input type="checkbox" name="hobby[]" id="hobby1" value="hob1"><label for="hobby1">Спорт</label><br>
+                                <input type="checkbox" name="hobby[]" id="hobby2" value="hob2"><label for="hobby2">Программирование</label><br>
+                                <input type="checkbox" name="hobby[]" id="hobby3" value="hob3"><label for="hobby3">Рисование</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-label">
+                                <span>Образование:</span>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-control">
+                                <input type="radio" name="education[]" id="education1" value="ed1"><label for="education1">Базовое</label><br>
+                                <input type="radio" name="education[]" id="education2" value="ed2"><label for="education2">Средне-специальное</label><br>
+                                <input type="radio" name="education[]" id="education3" value="ed3"><label for="education3">Высшее</label><br>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-label">
+                                <label for="sex">Пол:</label>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <select name="sex" id="sex">
+                                <option value="m">Мужской</option>
+                                <option value="f" selected>Женский</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="form-label"></div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-control">
+                                <input type="submit" name="submit" id="submit" value="Отправить">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
