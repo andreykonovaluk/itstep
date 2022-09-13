@@ -1,0 +1,57 @@
+.images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image {
+  width: 100%;
+  height: 287px;
+}
+
+.image1 {
+  background: url(../img/289d0988df9ccafe391c5a296f327b0e.png);
+  background-position: 50% 50%;
+  flex-basis: 25%;
+}
+
+.image2 {
+  background: url(../img/f6999cf8d7fee900e76ee65fd1827c4f.png);
+  background-position: 50% 50%;
+  flex-basis: 25%;
+}
+
+.image3 {
+  background: url(../img/dcd4c46d0ca35931cafdc77fd8bb3568.png);
+  background-position: 50% 50%;
+  flex-basis: 25%;
+}
+
+.image4 {
+  background: url(../img/a6ac58a6e4e6965bce3fda2c36e43e94.png);
+  background-position: 50% 50%;
+  flex-basis: 25%;
+}
+
+.image5 {
+  background: url(../img/60daec789521593f3dd91cb1bb3d7d60.png);
+  background-position: 50% 50%;
+  flex-basis: 25%;
+}
+
+.image6 {
+  background: url(../img/dca2e7f841dc5201337d6b80dfffe9f6.png);
+  background-position: 50% 50%;
+  flex-basis: 25%;
+}
+
+.image7 {
+  background: url(../img/516d0cf7e883585853018116d942949c.png);
+  background-position: 50% 50%;
+  flex-basis: 25%;
+}
+
+.image8 {
+  background: url(../img/24f25b480b4e49ccb7c463893d04da4d.png);
+  background-position: 50% 50%;
+  flex-basis: 25%;
+}/*# sourceMappingURL=style.css.map */

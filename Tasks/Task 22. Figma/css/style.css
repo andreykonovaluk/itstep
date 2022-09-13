@@ -1,0 +1,273 @@
+.container {
+  width: 1295px;
+  position: relative;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url(../../fonts/Gilroy-Light.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url(../../fonts/Gilroy-ExtraBold.otf);
+  font-weight: bold;
+  font-style: normal;
+}
+html, body {
+  font-family: "Gilroy", sans-serif;
+}
+
+.header {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  margin-left: 313px;
+}
+.header > div {
+  height: 90px;
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  border-left: 1px solid #C4C4C4;
+  padding: 0 36px;
+}
+.header__phone {
+  padding: 0 30px;
+  border-left: 1px solid #C4C4C4;
+}
+.header__phone a {
+  color: #000;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+}
+.header__salon {
+  padding: 0 30px;
+  border-left: 1px solid #C4C4C4;
+}
+.header__salon a {
+  color: #000;
+  font-size: 16px;
+  line-height: 19px;
+  text-decoration: none;
+  display: flex;
+  align-content: center;
+}
+.header__salon a .arrow-down {
+  margin-left: 15px;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  background-image: url(../img/look.png);
+}
+.header__special {
+  padding: 0 30px;
+  border-left: 1px solid #C4C4C4;
+}
+.header__special a {
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px 15px 8px;
+  background-color: #00868A;
+  display: flex;
+  align-items: center;
+}
+.header__special a .eye {
+  width: 26px;
+  height: 22px;
+  display: inline-block;
+  margin-right: 10px;
+  background-image: url(../img/eye.png);
+}
+.header__social ul {
+  list-style: none;
+  display: flex;
+  border-left: 1px solid #C4C4C4;
+  margin: 0;
+  padding: 0;
+}
+.header__social ul li {
+  border-right: 1px solid #C4C4C4;
+  padding: 0 24px;
+  display: flex;
+  height: 90px;
+  align-items: center;
+}
+.header__social ul li a {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-position: center center;
+}
+.header__social ul li a.vk {
+  background-image: url(../img/vk.png);
+}
+.header__social ul li a.yt {
+  background-image: url(../img/yt.png);
+}
+.header__social ul li a.fb {
+  background-image: url(../img/fb.png);
+}
+.header__social ul li a.ig {
+  background-image: url(../img/ig.png);
+}
+
+.info {
+  position: absolute;
+  width: 1920px;
+  height: 700px;
+  left: 0px;
+  top: 90px;
+  background: #4FBFA5;
+}
+.info-menu {
+  display: flex;
+  align-items: center;
+}
+.info-menu__block {
+  margin-left: 300px;
+}
+.info-menu__block ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.info-menu__block ul li {
+  padding: 0 24px;
+  display: flex;
+  height: 27px;
+  align-items: center;
+  margin: 0 20px;
+}
+.info-menu__block ul li a {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 150%;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+}
+.info-menu__record {
+  background: #fff;
+  width: 150px;
+  height: 33px;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.info-menu__record a {
+  display: flex;
+  align-content: center;
+  text-decoration: none;
+  color: #000;
+  width: 120px;
+  height: 15px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
+.info-screen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.info-screen__desc {
+  margin-left: 312px;
+  display: inline-block;
+}
+.info-screen__desc h2 {
+  width: 316px;
+  height: 72px;
+  color: #fff;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 150%;
+  margin-bottom: 20px;
+}
+.info-screen__desc .cosmetology {
+  width: 416px;
+  height: 84px;
+  color: #fff;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+}
+.info-screen__desc a {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 25px 14px;
+  gap: 10px;
+  background: #00868A;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 40px;
+  width: 113px;
+  height: 21px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.info-screen__slider {
+  display: flex;
+  margin-right: 312px;
+}
+.info-main-category ul {
+  list-style: none;
+  display: flex;
+  border-left: 1px solid #C4C4C4;
+  margin: 0;
+  padding: 0;
+}
+.info-main-category ul li {
+  display: flex;
+  height: 90px;
+  align-items: center;
+}
+.info-main-category ul li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.info-main-category ul li a.procedure {
+  width: 648px;
+  height: 80px;
+  background: #00868A;
+  color: #fff;
+}
+.info-main-category ul li a.center {
+  width: 324px;
+  height: 80px;
+  color: #fff;
+}
+.info-main-category ul li a.vip {
+  width: 324px;
+  height: 80px;
+  background: #00868A;
+  color: #fff;
+}/*# sourceMappingURL=style.css.map */

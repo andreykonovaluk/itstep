@@ -1,0 +1,136 @@
+header{
+    background-image: url(../img/cover.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    
+}
+.header__cover-image::after{
+    content: "";
+    background-image: url(../img/c1.png);
+    position: absolute;
+    width: 423px;
+    height: 423px;
+    right: 0;
+    top: 552px;
+}
+.header-top{
+    padding-top: 50px;
+    .container{
+        display: flex;
+        justify-content: space-between;
+    }
+    .header__logo{
+        a{
+            img{
+
+            }     
+        }
+    }
+    .header-main-menu{
+        display: flex;
+        align-items: center;
+    }
+    .header-main-menu__menu{
+        ul{
+            list-style: none;
+            display: flex;
+            margin-bottom: 0;
+            li{
+                margin-right: 50px;
+                a{
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    color: $black;
+                    text-decoration: none;
+                    &:hover {
+                        color: $yellow;
+                    }
+                }
+            }
+        }
+    }
+    .header-main-menu__languages{
+        ul{
+            list-style: none;
+            display: flex;
+            margin-bottom: 0;
+            li{
+                margin-left: 10px;
+                &.active {
+                    a {
+                        color: $yellow;
+                    }
+                }
+                a{
+                    font-weight: 600;
+                    font-size: 16px;
+                    line-height: 24px;
+                    text-transform: uppercase;
+                    color: $black;
+                    text-decoration: none;
+                    &:hover{
+                        color: $yellow;
+                    }
+                }
+            }
+        }
+    }
+}
+.title-row{
+    padding: 200px 0 100px;
+}
+.title{
+    width: 55%;
+    &-cover{
+        background-color: $yellow;
+        padding: 38px 49px;
+        margin-bottom: 11px;
+        h1{
+            font-family: Poppins;
+            font-size: 40px;
+            font-weight: 600;
+            line-height: 49px;
+            text-transform: uppercase;
+            color: $black;
+        }
+    }
+    &-cta-block{
+        background-color: $black;
+        padding: 11px;
+        display: flex;
+        &__info{
+            display: flex;
+            align-items: center;
+            p{
+                color: $white;
+                margin-bottom: 0;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 24px;
+                padding: 0 28px;
+            }
+        }
+        &__link{
+            display: flex;
+            a{
+                display: block;
+                width: 230px;
+                color: $black;
+                background: $white;
+                padding: 21px 41px;
+                text-decoration: none;
+                text-transform: uppercase;
+                
+                &:hover {
+                    background-color: $yellow;
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+
+

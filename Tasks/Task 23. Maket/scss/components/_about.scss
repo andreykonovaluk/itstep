@@ -1,0 +1,54 @@
+.about {
+    background-image: url(../img/about.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+    padding-top: 258px;
+    overflow-x: hidden;
+    position: relative;
+
+    &__logo {
+        margin-bottom: 78px;
+
+        img {
+            width: 242px;
+        }
+    }
+
+    &__text {
+        font-size: 22px;
+        line-height: 33px;
+        text-transform: uppercase;
+        margin-bottom: 74px;
+    }
+
+    &__desciption {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.container_about {
+    background-color: $white;
+    padding: 68px 40px 105px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: -300px;
+        width: 300px;
+        background: $white;
+    }
+}
+.about__cover-image::after {
+    background-image: url(../img/c3.png);
+    content: "";
+    position: absolute;
+    width: 423px;
+    height: 423px;
+    right: 0;
+    top: 591px;
+}
