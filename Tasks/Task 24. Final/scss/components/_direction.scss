@@ -1,0 +1,120 @@
+.direction{
+    background: $black;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+    &__text{
+        color: $white;
+        margin: 150px 60px 20px;
+
+        @media (min-width: 440px) {
+            font-size: 24px;
+            line-height: 38px;
+            width: 400px;
+            margin-top: 80px;
+        }
+        @media (min-width: 768px) {
+            width: 700px;
+            margin-top: 80px;
+        }
+        @media (min-width: 1280px) {
+            font-size: 40px;
+            line-height: 64px;
+            width: 1100px;
+            margin-top: 150px;
+        }
+        @media (min-width: 1920px) {
+            font-size: 40px;
+            line-height: 64px;
+            width: 1300px;
+            margin-top: 150px;
+        }
+    }
+
+    &__groups{
+        display: flex;
+        padding-bottom: 50px;
+        margin-top: 0px;
+
+        @media(max-width: 767px) {
+            display: flex;
+            flex-direction: column;
+            height: 1037px;
+        }
+    }
+    &-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-right: 11px;
+        width: 460px;
+        padding: 50px 30px 39px;
+
+        @media (min-width: 440px) {
+            width: 400px;
+        }
+        @media (min-width: 768px) {
+            width: 200px;
+            margin-bottom: 85px;
+        }
+        @media (min-width: 1280px) {
+            width: 370px;
+            margin-bottom: 160px;
+        }
+        @media (min-width: 1920px) {
+            width: 460px;
+        }
+    }
+    &:last-child {
+        margin-right: 0;
+    }    
+    &-group__image{
+        margin-left: 50px;
+        margin-bottom: 25px;
+
+        img{
+            margin-left: -39px;
+            width: 40px;
+            height: 40px;
+        }
+    }
+    &-group__title{
+        padding-right: -15px;
+        color: $white;
+
+        h4{
+            font-weight: 500;
+            text-transform: uppercase;
+
+            @media (min-width: 440px) {
+                font-size: 18px;
+                line-height: 25px;
+            }
+
+            @media (min-width: 1280px) {
+                font-size: 24px;
+                line-height: 33px;
+            }
+        }
+    }
+    &-group__text{
+        height: 120px;
+
+        p{
+            font-weight: 500;
+            color: $white;
+
+            @media (min-width: 440px) {
+                font-size: 16px;
+                line-height: 24px;
+            }
+
+            @media (min-width: 1280px) {
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    }    
+}

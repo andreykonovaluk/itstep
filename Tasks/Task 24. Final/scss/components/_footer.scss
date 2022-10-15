@@ -1,0 +1,230 @@
+footer{
+    background: $black;
+
+    .company{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 150px;
+        margin-bottom: 160px;
+
+        &__logo{
+            margin-top: 150px;
+            margin-left: 50px;
+        }
+        h4{
+            font-size: 24px;
+            line-height: 32px;
+            color: $white;
+            font-weight: 400;
+            text-transform: uppercase;
+            margin-top: 150px;
+            margin-left: 85px;
+        }
+        @media(max-width:1279px) {
+            &__logo {
+            display: none;
+            }
+        }
+
+        @media(min-width:1920px) {
+            &__logo {
+            display: none;
+            }
+        }
+        &__about{
+
+            ul{
+                padding-inline-start: 0px;
+                margin-left: 85px;
+
+                li{
+                    padding-bottom: 35px;
+
+                    a{
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 22px;
+                        color: $white;
+                        text-decoration: none;            
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+            @media(max-width:767px) {
+                width: 50%;
+            }
+            @media(min-width:1920px) {
+                margin-left: 100px;
+            }
+        }
+        &__services{
+
+            ul{
+                padding-inline-start: 0px;
+                margin-left: 85px;
+
+                li{
+                    padding-bottom: 32px;
+
+                    a{
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 22px;
+                        color: $white;
+                        text-decoration: none;
+                        text-transform: uppercase;
+
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+            @media(max-width:767px) {
+                width: 50%;
+            }
+            @media(min-width:1920px) {
+                margin-left: -200px;
+            }
+        }
+        &-info{
+            h4 {
+                margin-left: 0px;
+            }
+            &__telephone{
+                .tel {
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    padding-left: 10px;
+
+                    background-repeat: no-repeat;
+                    background-image: url(../img/bi_phone.png);
+                }
+
+                a {
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 25px;
+                    text-decoration: none;
+                    color: $white;
+                    text-transform: uppercase;
+                    margin-right: 40px;
+                    margin-top: 10px;
+
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+            &__adress{
+                width: 341px;
+
+                .map{
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    padding-left: 10px;
+                    background-repeat: no-repeat;
+                    background-image: url(..//img/Group\ \(1\).png);
+                }
+                p{
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 25px;
+                    text-decoration: none;
+                    color: $white;
+                    margin-top: 10px;
+                }
+            }
+            &__email{
+                width: 341px;
+                .letter{
+                    width: 30px;
+                    height: 30px;
+                    background-repeat: no-repeat;
+                    display: inline-block;
+                    padding-left: 10px;
+                    background-image: url(../img/Vector\ 2.png);
+                }
+                a{
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 25px;
+                    text-decoration: none;
+                    color: $white;
+                    padding-top: 10px;
+
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }
+            &__social{
+
+                ul{
+                    list-style: none;
+                    display: flex;
+                    margin: 0;
+                    padding: 0;
+
+                    li{
+                        padding: 0 24px;
+                        display: flex;
+                        height: 90px;
+                        align-items: center;
+                        a{
+                            display: inline-block;
+                            width: 30px;
+                            height: 30px;
+                            background-position: center center;
+                            border-radius: 50%;
+
+                            &.tg {
+                                background-image: url(../img/icon_telegram.png);
+                            }
+
+                            &.dr {
+                                background-image: url(../img/icon_dribbble.png);
+                            }
+
+                            &.be {
+                                background-image: url(../img/icon_behance.png);
+                            }
+
+                            &.in {
+                                background-image: url(../img/icon_linkedin.png);
+                            }
+                        }
+                    }
+                }
+            }
+            @media(max-width:767px) {
+                width: 100%;
+                margin: 420px 10px 5px -416px;
+            }
+
+            @media(min-width:1920px) {
+                margin-right: 500px;
+
+            }
+        }
+    }
+}
+.year{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    border-top: 2px solid $white;
+    p{
+        color: $white;
+        font-size: 18px;
+        line-height: 22px;
+        text-transform: uppercase;
+        padding: 15px;
+    }
+}
