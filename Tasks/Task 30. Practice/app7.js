@@ -11,5 +11,7 @@ console.log(a);
 for(i = 0; i < a.length; i++){
     if(a[i] == x){
         console.log('число', x, 'есть в массиве, под номером', i);
-    }
+    } /*else if (a[i] != x) {
+        console.log('числа', x, ' нет в массиве, под номером');
+    }*/
 }
