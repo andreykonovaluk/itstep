@@ -8,10 +8,19 @@ for (let i = 0; i < n; i++) {
 
 }
 console.log(a);
-for(i = 0; i < a.length; i++){
-    if(a[i] == x){
-        console.log('число', x, 'есть в массиве, под номером', i);
-    } /*else if (a[i] != x) {
-        console.log('числа', x, ' нет в массиве, под номером');
-    }*/
+
+let isFind = false;
+
+for (let i = 0; i < a.length; i++) {
+    if (a[i] == x) {
+        isFind = true;
+        break;
+    }
+}
+
+console.log(a);
+if (isFind == true) { 
+    console.log(`Число ${x} найдено`);
+} else {
+    console.log(`Число ${x} не найдено`);
 }

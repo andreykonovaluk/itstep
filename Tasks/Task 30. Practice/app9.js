@@ -11,10 +11,10 @@ negCount = 0;
 console.log(a);
 
 for (let i = 1; i < a.length; i++) {
-    if (a[i-1] <= a[i]) {
+    if (a[i-1] < a[i]) {
         posCount++;
         
-    } else if (a[i-1] >= a[i]) {
+    } else if (a[i-1] > a[i]) {
         negCount++;
     }
 }
