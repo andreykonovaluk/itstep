@@ -5,7 +5,7 @@
 
 const a = [-1, 2, -3, 0, -4, 25, -6, 100];
 console.log(a);
-let filtered = a.filter(function arrayOfPositiveNumbers(elem){
+let filtered = a.filter(function (elem){
     return elem > 0;
 });
 console.log(filtered);
