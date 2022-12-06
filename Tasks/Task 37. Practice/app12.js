@@ -6,11 +6,11 @@ console.log(word);
 word = word.toLowerCase()
            .split('');
 console.log(word);
-word = word.map((item, index) => {
+word = word.map(function(item, index)  {
     if(index % 2 != 0){
-        newStr[index] = word[index].toUpperCase().join('');
+        return item.toUpperCase();
     }
-});
+}).join('');
 console.log(newStr);
 
 /*for(i = 0; i < word.length && (i % 2 != 0); i++){
