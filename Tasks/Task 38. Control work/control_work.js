@@ -134,9 +134,9 @@ console.log("Task 9:");
 
 let data = "22.10.1990";
 let arrayData = data.split('.');
-//let day = arrayData[0], month = arrayData[1], year = arrayData[2];
+let day = + arrayData[0], month = + arrayData[1], year = + arrayData[2];
 
-let day = 22, month = 10, year = 1990;
+//let day = 22, month = 10, year = 1990;
 
 console.log(arrayData);
 
