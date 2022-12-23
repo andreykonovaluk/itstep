@@ -25,6 +25,20 @@ class Person{
     }
 }
 
+class Client extends Person{
+
+    address;
+    payment;
+    constructor(fullName, age, address, payment){
+        super(fullName, age);
+        this.address = address;
+        this.payment = payment;
+    }
+    toString() {
+        return `FullName: ${this.fullName}, Age: ${this.age}, Address: ${this.address}, Payment: ${this.payment}`;
+    }
+}
+
 class Driver extends Person{
 
     experience;
@@ -35,7 +49,7 @@ class Driver extends Person{
         
     }
     toString() {
-        return `Водительский стаж: ${this.experience}`;
+        return `FullName: ${this.fullName}, Age: ${this.age}, Водительский стаж: ${this.experience}`;
     }
 }
 
@@ -68,7 +82,20 @@ class Car{
     }
 
     toString(){
-        return `Car marka: ${ this.marka }, with engine: ${ this.engine }, car class: ${ this.carClass }, driver: ${ this.driver }`;
+        return `Car marka: ${ this.marka }, with engine: ${ this.engine.toString() }, car class: ${ this.carClass }, driver: ${ this.driver }`;
+    }
+}
+
+class Taxi extends Car{
+
+    tariff;
+
+    constructor(carClass, engine, driver, marka, tariff) {
+        super(carClass, engine, driver, marka);
+        this.tariff = tariff;
+    }
+    toString(){
+        return `Car marka: ${this.marka}, with engine: ${this.engine.toString()}, car class: ${this.carClass}, driver: ${this.driver}, tarif: ${this.tariff}`;
     }
 }
 
@@ -76,12 +103,12 @@ class Lorry extends Car{
 
     carrying;
 
-    constructor(carClass, marka, engine, driver, carrying) {
+    constructor(carClass, engine, driver, marka, carrying) {
         super(carClass, marka, engine, driver)
         this.carrying = carrying;
     }
     toString() {
-        return `Carrying lorry: ${this.carrying}`;
+        return `Car marka: ${this.marka}, with engine: ${this.engine}, car class: ${this.carClass}, driver: ${this.driver }, Carrying lorry: ${this.carrying}`;
     }
 }
 
@@ -89,13 +116,33 @@ class SportCar extends Car{
 
     speed;
 
-    constructor(carClass, marka, engine, driver, speed) {
+    constructor(carClass, engine, driver, marka, speed) {
         super(carClass, marka, engine, driver);
         this.speed = speed;
     }
 
     toString() {
-        return `Top speed: ${this.speed}`;
+        return `Car marka: ${this.marka}, driver: ${this.driver }, top speed: ${this.speed}`;
+    }
+}
+
+class Order {
+
+    distance;
+    taxi;
+    client;
+
+    constructor(distance, taxi, client){
+        this.distance = distance;
+        this.taxi = taxi;
+        this.client = client;
+    }
+    getPrice() {
+        return (this.distance * this.taxi.tariff);
+    }
+
+    toString(){
+        return `Расстояние: ${this.distance}, Taxi: ${this.taxi.toString()}, Клиент: ${this.client.toString()}, Цена поездки: ${this.getPrice()}`;
     }
 }
 
@@ -106,32 +153,33 @@ console.log(engineVW);
 console.log(engineAudi.toString());
 console.log(engineVW.toString());
 
-let peter = new Person("Иванов Петр Петрович", "41 год");
-let ivan = new Person("Петров Иван Иванович", "47 лет");
+peter = new Driver("Иванов Петр Петрович", "41 год", "9 лет");
+ivan = new Driver("Петров Иван Иванович", "47 лет", "4 года");
 console.log(peter);
 console.log(ivan);
 console.log(peter.toString());
 console.log(ivan.toString());
 
-peterExperiense = new Driver("Иванов Петр Петрович", "41 год", "9 лет");
-ivanExperiense = new Driver("Петров Иван Иванович", "47 лет", "4 года");
-console.log(peterExperiense);
-console.log(ivanExperiense);
-console.log(peterExperiense.toString());
-console.log(ivanExperiense.toString());
-
-let car = new Car("Легковой автомобиль", "Бензин", "Водитель", "VW Polo");
-console.log(car);
-console.log(car.start());
-console.log(car.stop());
-console.log(car.turnLeft());
-console.log(car.turnRight());
-console.log(car.toString());
-
-let lorry = new Lorry("Грузовик", "Дизель", "Опыт", "Mersedes",  "Насыпные грузы");
+let lorry = new Lorry("Грузовик", engineAudi, peter, "Audi",  "20 тонн");
 console.log(lorry);
 console.log(lorry.toString());
 
-let sportCar = new SportCar("Спорткар", "Audi", "710 л.с.", "Петров Иван Иванович", "320 км/ч");
+let sportCar = new SportCar("Спорткар", engineVW, ivan, "Volkswagen", "320 км/ч");
 console.log(sportCar);
 console.log(sportCar.toString());
+
+//fullName, age, address, payment
+let client = new Client("Сидоров Семен Семенович", "27 лет", "Пр-т Черняховского д.27а", "Наличные");
+console.log(client);
+console.log(client.toString());
+
+//carClass, engine, driver, marka, tariff
+let taxi = new Taxi("седан", engineVW, peter, "Volkswagen Polo", 3.3);
+console.log(taxi);
+console.log(taxi.toString());
+
+//distance, taxi, client
+let order = new Order(5.6, taxi, client);
+console.log(order);
+console.log(order.getPrice());
+console.log(order.toString());
