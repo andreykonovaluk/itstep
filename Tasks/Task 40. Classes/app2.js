@@ -69,4 +69,4 @@ let Students = [];
 Students.push(student, aspirant);
 console.log(Students);
 
-Students.forEach((item) => console.log(student.getScholarship(),aspirant.getScholarship()));
+Students.forEach((item) => console.log(item.getScholarship()));
