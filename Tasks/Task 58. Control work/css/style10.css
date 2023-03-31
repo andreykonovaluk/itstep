@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.game {
+    display: flex;
+    width: 600px;
+    flex-wrap: wrap;
+}
+
+.game__field {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.game__field>div {
+    width: 150px;
+    height: 150px;
+    box-sizing: border-box;
+    border: 1px solid olivedrab;
+
+}
+.black{
+    background-color: black;
+}
+.red{
+    background-color: red;
+}
