@@ -2,15 +2,13 @@
 
 let ul = document.querySelector("ul");
 ul.addEventListener("mouseover", function(event){
-    let li = document.querySelectorAll("li");
-    Array.from(li).forEach((li, i) => {
-        
-        if (li[i] % 2 == 0){
-            event.target.style.background = "#f00";
-        } else if (li[i] % 2 != 0) {
-            event.target.style.background = "#00f";
-        }
-    })
+    let li = event.target;
+    
+    if ((+li.innerText) % 2 == 0) {
+        event.target.style.background = "#f00";
+    } else if ((+li.innerText) % 2 != 0) {
+        event.target.style.background = "#00f";
+    }
     
 });
 

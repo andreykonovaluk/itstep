@@ -13,5 +13,5 @@ if (button) {
         input1.value = input2Value;
         input2.value = input1Value;
         
-    });
+    }); 
 }

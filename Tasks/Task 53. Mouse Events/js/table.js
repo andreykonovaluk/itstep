@@ -11,7 +11,7 @@ Array.from(tds).forEach((item) => {
 
 let table = document.querySelector("table");
 
-table.addEventListener("mou", function(event){
+table.addEventListener("dblclick", function(event){
     //this = table
     //event.target = td, на которую навели внутри
     alert(event.target.innerText);

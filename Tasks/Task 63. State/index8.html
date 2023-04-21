@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        function MathOperations() {
+
+            const [num1, setNum1] = React.useState(0);
+            const [num2, setNum2] = React.useState(0);
+            const [operation, setOperation] = React.useState("+");
+
+            function handleChangeInput1(event) {
+                setNum1(+event.target.value); 
+            }
+
+            function handleChangeInput2(event) {
+                setNum2(+event.target.value);
+            }
+
+            function handleChangeOperation(event) {
+                setOperation(event.target.value);
+            }
+
+            return (
+                <div>
+                    <p />Первое число: <input type="text" value={num1} name="num1" id="num1" onChange={handleChangeInput1} />
+                    <p />Второе число: <input type="text" value={num2} name="num2" id="num2" onChange={handleChangeInput2} />
+
+                    <select name="operation" id="operation" onChange={handleChangeOperation}>
+                        <option value="+">Сумма</option>
+                        <option value="-">Разность</option>
+                        <option value="*">Произведение</option>
+                        <option value="/">Частное</option>
+                    </select>
+
+                    <div>
+
+                        {operation == "+" &&
+                        <>Сумма {num1} и {num2} равна {num1 + num2} <br /></>
+                        }
+
+                        {operation == "-" &&
+                                <>Разность {num1} и {num2} равна {num1 - num2} <br /></>
+                        }
+
+                        {operation == "*" &&
+                            <>Произведение {num1} и {num2} равно {num1 * num2} <br /></>
+                        }
+                        
+                        {operation == "/" && num2 == 0 &&
+                            <><span>Деление на 0</span></>
+                        }
+
+                        {operation == "/" && num2 != 0 &&
+                            <><span>Частное  {num1} и {num2} равно {num1 / num2}</span></>
+                        }
+                        
+
+                        
+                    </div>
+                </div>
+            );
+        }
+
+        ReactDOM.createRoot(
+            document.getElementById("app")
+        )
+            .render(
+                <MathOperations />
+            );
+    </script>
+</body>
+
+</html>
