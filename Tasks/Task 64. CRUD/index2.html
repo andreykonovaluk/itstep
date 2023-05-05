@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/styleButton.css">
+</head>
+<body>
+
+    <div id="app"></div>
+    
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+
+        function App(){
+
+            const [post, setPost] = React.useState(
+                {
+                    title: "",
+                    text: "",
+                    image: ""
+                }
+            );
+
+            const [posts, setPosts] = React.useState([]);
+
+            const [editIndex, setEditIndex] = React.useState(-1);
+
+            function handleFormSubmit(event) {
+                event.preventDefault();
+                if (editIndex == - 1) {
+                    setPosts([...posts,
+                    {
+                        title: post.title,
+                        text: post.text,
+                        image: post.image,
+                        date: new Date()
+                    }
+                    ]);
+                    setPost(
+                        {
+                            title: "",
+                            text: "",
+                            image: ""
+                        }
+                    );
+                } else {
+                    posts[editIndex] = post;
+                    setPosts([...posts,
+                    {
+                        title: post.title,
+                        text: post.text,
+                        image: post.image,
+                        date: new Date()
+                    }
+                    ]);
+                    setPost(
+                        {
+                            title: "",
+                            text: "",
+                            image: ""
+                        }
+                    );
+                    setEditIndex(-1);
+                }
+                
+            }
+
+            function handleChangeTitle(event) {handleChangeTitle
+                setPost({ ...post, title: event.target.value});
+            }
+
+            function handleChangeText(event) {
+                setPost({ ...post, text: event.target.value });
+            }
+
+            function handleChangeImage(event) {
+                setPost({ ...post, image: event.target.value });
+            }
+
+            function handleClickDelete(event) {
+                let index = +event.target.dataset.id;
+                posts.splice(index, 1);
+                setPosts([ ...posts]);
+            }
+
+            function handleClickEdit(event) {
+                let index = +event.target.dataset.id;
+                let editPost = posts[index];
+                setBook({
+                    title: editPost.title,
+                    text: editPost.text,
+                    image: editPost.image,
+                    date: new Date()
+                });
+                setEditIndex(index);
+            }
+
+            return(
+                    <>
+                        <div>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-8">
+                                        <form action="" onSubmit={handleFormSubmit} >
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-label">
+                                                        <label for="title">Название поста:</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-control">
+                                                        <input type="text" name="title" id="title" value={post.title} placeholder="Введите название поста" onChange={handleChangeTitle} />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-label">
+                                                        <label for="text">Текст поста:</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-control">
+                                                        <textarea name="text" id="text" value={post.text} placeholder="Введите текст поста" onChange={handleChangeText} />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                    <div class="form-label">
+                                                        <label for="image">Имя картинки:</label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-control">
+                                                        <input type="text" name="image" id="image" value={post.image} placeholder="Введите имя картинки" onChange={handleChangeImage} />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-6">
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-control">
+                                                        <button type="submit">{editIndex > -1 ? <>Сохранить</> : <>Добавить</>}</button>  
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                        <table border="1">
+                            <tr>
+                                <th>Номер</th>
+                                <th>Название поста</th>
+                                <th>Текст поста</th>
+                                <th>Имя картинки</th>
+                                <th>Дата публикации</th>
+                                <th>Действия</th>
+                            </tr>
+                            {
+                                posts.map(function (item, index) {
+                                    return  <tr>
+                                                <td>{index + 1}</td>
+                                                <td>{item.title}</td>
+                                                <td>{item.text}</td>
+                                                <td><img src={"./img/"+item.image+".jpg"} /></td>
+                                                <td>{item.date.toLocaleDateString()}</td>
+                                                <td>
+                                                    <button class="fifth btn" onClick={handleClickEdit} data-id={index} >Редактировать</button>
+                                                    <button class="fifth btn" onClick={handleClickDelete} data-id={index} >Удалить</button>
+                                                </td>
+                                            </tr>
+                                })
+                            }
+                        </table>
+                    </div>
+                    </>
+            );
+        }
+
+        ReactDOM.createRoot(
+                document.getElementById("app")
+            )
+                .render(
+                    <App />
+                );
+    </script>
+    
+</body>
+</html>
