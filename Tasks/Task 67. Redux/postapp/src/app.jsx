@@ -11,6 +11,6 @@ ReactDOM.createRoot(
 )
     .render(
         <Provider store={store}>
-            <AppView/>
+            <AppView />
         </Provider>
     );

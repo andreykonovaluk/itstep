@@ -20,4 +20,20 @@ const editProduct = (id, product) => {
     }
 };
 
-module.exports = { addProduct, deleteProduct, editProduct };
+const likeProduct = (id) => {
+    return {
+        type: "PRODUCT_LIKE",
+        id
+    }
+}
+
+const disLikeProduct = (id) => {
+    return {
+        type: "PRODUCT_DISLIKE",
+        id
+    }
+}
+
+
+
+module.exports = { addProduct, deleteProduct, editProduct, likeProduct, disLikeProduct, };

@@ -6,101 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/style1.css">
+    <link rel="stylesheet" href="./css/style11.css">
 </head>
 
 <body>
-
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <form action="" method="post" name="reg_form" class="reg-form">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="form-label">
-                                <label for="productCode">Код продукта:</label>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-control">
-                                <input type="text" name="productCode" id="productCode" value="" placeholder="Введите код продукта">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="form-label">
-                                <label for="productName">Название товара:</label>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-control">
-                                <input type="text" name="productName" id="productName" value="" placeholder="Введите название товара">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="form-label">
-                                <label for="unitPrice">Цена за единицу товара:</label>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-control">
-                                <input type="text" name="unitPrice" id="unitPrice" value="" placeholder="Введите цену зат штуку">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="form-label">
-                                <label for="quantity">Колличество товара:</label>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-control">
-                                <input type="text" name="quantity" id="quantity" value="" placeholder="Введите колличество товара">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-lg-6">
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="form-control">
-                                <button type="submit">Добавить</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-
-                <table border="1">
-                    <thead>
-                        <tr>
-                            <th>Код товара</th>
-                            <th>Название</th>
-                            <th>Цена одной единицы</th>
-                            <th>Колличество</th>
-                            <th>Действия</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                    </tbody>
-                </table>
-                <div>
-                    <div>
-                        Итого:
-                    </div>
-                    <div class="sum">
-
-                    </div>
+        <div>
+            <form action="" method="post" id="reg_form">
+                <div class="input_fields">
+                    <input type="text" name="code" id="code" placeholder="Код товара" value="">
+                    <input type="text" name="name" id="name" placeholder="Название" value="">
+                    <input type="text" name="price" id="price" placeholder="Цена за шт." value="">
+                    <input type="number" name="quantity" id="quantity" placeholder="Количество" value="">
                 </div>
-            </div>
+                <div>
+                    <button type="submit" class="btn-4 add_button">Добавить</button>
+                </div>
+            </form>
         </div>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>Код товара</th>
+                    <th>Название</th>
+                    <th>Цена за шт.</th>
+                    <th>Количество</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="result">Стоимость продуктов:</div>
     </div>
-
     <script src="./js/solve11.js"></script>
 </body>
 
