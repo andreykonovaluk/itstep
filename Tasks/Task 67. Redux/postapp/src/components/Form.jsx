@@ -5,17 +5,16 @@ const Form = (props) => {
     let [data, setData] = React.useState({
         title: "",
         text: "",
-        image: "no-image.png"
+        image: "no-image.png",
     });
     
     function handleFormSubmit(event){
         event.preventDefault();
         props.onPostAdd(data);
-        console.log(props);
         setData({
             title: "",
             text: "",
-            image: "no-image.png"
+            image: "no-image.png",
         });
     }
 

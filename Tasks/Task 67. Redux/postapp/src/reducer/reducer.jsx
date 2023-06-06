@@ -3,10 +3,9 @@ const reducer = (state = {}, action) => {
     switch(action.type){
 
         case "INIT":
-            return {
-                ...state,
+            return {...state,
                 posts: action.posts,
-                lastIdProduct: action.lastIdProduct
+                lastIdPost: action.lastIdPost
             }
 
         case "POST_ADD":
@@ -15,10 +14,9 @@ const reducer = (state = {}, action) => {
                 id: newId,
                 title: action.post.title,
                 text: action.post.text,
-                image: action.post.image
+                image: action.post.image,
             };
-            return {
-                ...state,
+            return {...state,
                 posts: [...state.posts, newPost],
                 lastIdPost: newId
             };
@@ -26,6 +24,16 @@ const reducer = (state = {}, action) => {
         case "POST_DELETE":
             return {...state,
                 posts: state.posts.filter((item) => item.id != action.postId)
+            };
+
+        case "POST_LIKE":
+            return {...state,
+                    products: state.products.map((item) => {
+                        if (item.id == action.id) {
+                            item.favorite = true;
+                        }
+                        return item;
+                    })
             };
 
         case "POST_EDIT":

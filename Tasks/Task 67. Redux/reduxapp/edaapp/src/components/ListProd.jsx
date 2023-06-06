@@ -19,10 +19,6 @@ const ListProd = (props) => {
         return props.products.reduce((sum, product) => sum + product.price * product.quantity, 0);
     }
 
-    function rowSum() {
-        return props.products.reduce((product) => product.price * product.quantity)
-    }
-
     return <>
         <div>
             <table className="table table-bordered border-primary">
@@ -41,7 +37,7 @@ const ListProd = (props) => {
                 <tbody>
                     {
                         props.products.map((product, index) => {
-                            return <tr key={index}>
+                            return <tr key={product.id}>
                                         <td>{index+1}</td>
                                         <td>{product.name}</td>
                                         <td>{product.price}</td>

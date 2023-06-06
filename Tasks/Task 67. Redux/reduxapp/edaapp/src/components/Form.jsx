@@ -18,7 +18,6 @@ const Form = (props) => {
             quantity: 0,
             favorite: false
         });
-        console.log(posts);
     }
 
     function handleNameChange(event){

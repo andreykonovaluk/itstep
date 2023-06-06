@@ -26,4 +26,11 @@ const editPost = (id, post) => {
     }
 };
 
-module.exports = { addPost, deletePost, editPost };
+const likePost = (id) => {
+    return {
+        type: "POST_LIKE",
+        id
+    }
+}
+
+module.exports = { addPost, deletePost, editPost, likePost };
