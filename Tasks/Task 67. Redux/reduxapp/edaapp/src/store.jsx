@@ -30,6 +30,7 @@ store.dispatch({
     products:[
         {
             id: 1,
+            image: "image2.jpg",
             name: "Молоко",
             price: 5,
             quantity: 1,
@@ -37,6 +38,12 @@ store.dispatch({
             favorite: false
         }
     ],
+    formError: {
+        image: "",
+        name: "",
+        price: "",
+        quantity: ""
+    },
     lastIdProduct: 1,
     
 });

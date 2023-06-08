@@ -3,21 +3,59 @@ const React = require("react");
 const Form = (props) => {
 
     let [data, setData] = React.useState({
+        image: "",
         name: "",
-        price: 0,
-        quantity: 0,
+        price: "",
+        quantity: "",
         favorite: false
     })
 
+    let [formError, setFormError] = React.useState({
+        image: "",
+        name: "",
+        price: "",
+        quantity: "",
+    }); 
+
+    function validate() {
+        let isValid = true;
+        if (data.image == "") {
+            formError.image = "Картинка не выбрана";
+            isValid = false;
+        }
+        if (data.name == "") {
+            formError.name = "Поле не заполнено";
+            isValid = false;
+        }
+        if (data.price == "") {
+            formError.price = "Поле не заполнено";
+            isValid = false;
+        }
+        if (data.quantity == "") {
+            formError.quantity = "Поле не заполнено";
+            isValid = false;
+        }
+        setFormError({ ...formError });
+        return isValid;
+    }
+
     function handleFormSubmit(event){
         event.preventDefault();
+        if (!validate()) {
+            return false;
+        }
         props.onProductAdd(data);
         setData({
+            image: "",
             name: "",
-            price: 0,
-            quantity: 0,
+            price: "",
+            quantity: "",
             favorite: false
         });
+    }
+
+    function handleImageChange(event){
+        setData({ ...data, image: event.target.value });
     }
 
     function handleNameChange(event){
@@ -47,16 +85,24 @@ const Form = (props) => {
     return<>
                 <form className="blog_form" action="" onSubmit={handleFormSubmit}>
                     <div className="mb-3">
+                        <label htmlFor="image" className="form-label">Картинка</label>
+                        <input type="text" className="form-control" id="image" onChange={handleImageChange} value={data.image} />
+                        {formError.image != "" && <div className="red">{formError.image}</div>}
+                    </div>
+                    <div className="mb-3">
                         <label htmlFor="name" className="form-label">Название</label>
                         <input type="text" className="form-control" id="name" onChange={handleNameChange} value={data.name}/>
+                        {formError.name != "" && <div className="red">{formError.name}</div>}
                     </div>
                     <div className="mb-3">
                         <label htmlFor="price" className="form-label">Цена</label>
                         <input type="text" className="form-control" id="price" onChange={handlePriceChange} value={data.price} />
+                        {formError.price != "" && <div className="red">{formError.price}</div>}
                     </div>
                     <div className="mb-3">
                         <label htmlFor="quantity" className="form-label">Количество</label>
                         <input type="text" className="form-control" id="quantity" onChange={handleQuantityChange} value={data.quantity} />
+                        {formError.quantity != "" && <div className="red">{formError.quantity}</div>}
                     </div>
                     <div className="mb-3">
                     <div className="row">
@@ -69,9 +115,9 @@ const Form = (props) => {
                             <div className="form-control">
                                 <select name="units" id="units" onChange={handleUnitsChange}>
                                     <option value="">Выберите единицу измерения</option>
-                                    <option value="l">Литр</option>
-                                    <option value="kg">Килограмм</option>
-                                    <option value="piece">Штука</option>
+                                    <option value="Литр">Литр</option>
+                                    <option value="Килограмм">Килограмм</option>
+                                    <option value="Штука">Штука</option>
                                 </select>
                             </div>
                         </div>

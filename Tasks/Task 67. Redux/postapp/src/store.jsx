@@ -24,8 +24,8 @@ store.dispatch({
             id: 1,
             title: "Космос",
             text: "Бла-бла-бла про космос, про его бесконечные просторы и т.д. и т.п.",
-            image: "Tasks/Task 67. Redux/postapp/public/assets/img/image2.jpg",
-            favorite: false
+            image: "image5.jpg",
+            date: new Date()
         }
     ],
     lastIdPost: 1,

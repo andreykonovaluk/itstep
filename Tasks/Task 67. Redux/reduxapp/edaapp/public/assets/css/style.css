@@ -160,3 +160,9 @@ body{
     border: 0;
     background-color: #fff;
 }
+img{
+    width: 100px;
+}
+.red{
+    color: #f00;
+}

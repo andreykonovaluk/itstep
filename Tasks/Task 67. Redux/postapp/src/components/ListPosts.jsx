@@ -12,11 +12,11 @@ const ListPosts = (props) => {
             {
                 props.posts.map((post, index) =>{
                     return <div className="card mb-3" key={post.id}>
-                        <img src={`Tasks/Task 67. Redux/postapp/public/assets/img/${post.image}`} className="card-img-top" alt={post.title} />
+                        <img src={`./public/assets/img/${post.image}`} className="card-img-top" alt={post.title} />
                         <div className="card-body">
                             <h5 className="card-title">#{index+1} {post.title}</h5>
                             <p className="card-text">{post.text} </p>
-                            <p className="card-text"><small className="text-body-secondary">{post.date}</small></p>
+                            <p className="card-text"><small className="text-body-secondary">{post.date.toLocaleDateString()}</small></p>
                         </div>
                         <div className="card-footer text-body-secondary">
                             <button type="button" className="btn btn-primary">Редактировать</button>&nbsp;

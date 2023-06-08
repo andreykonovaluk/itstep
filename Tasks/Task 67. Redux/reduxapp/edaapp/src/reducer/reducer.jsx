@@ -6,6 +6,7 @@ const reducer = (state = {}, action) => {
             return {...state,
                 products: action.products,
                 user: action.user,
+                formError: action.formError,
                 lastIdProduct: action.lastIdProduct
             }
 
@@ -13,6 +14,7 @@ const reducer = (state = {}, action) => {
             let newId = ++state.lastIdProduct;
             let newProduct = {
                 id: newId,
+                image: action.product.image,
                 name: action.product.name,
                 price: action.product.price,
                 quantity: action.product.quantity,

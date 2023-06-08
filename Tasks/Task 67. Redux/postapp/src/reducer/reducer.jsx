@@ -15,6 +15,7 @@ const reducer = (state = {}, action) => {
                 title: action.post.title,
                 text: action.post.text,
                 image: action.post.image,
+                date: new Date()
             };
             return {...state,
                 posts: [...state.posts, newPost],
