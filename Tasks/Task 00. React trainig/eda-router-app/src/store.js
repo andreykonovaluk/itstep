@@ -1,4 +1,6 @@
 import { createStore, compose, applyMiddleware } from 'redux';
+import { createBrowserHistory } from 'history';
+import { routerMiddleware } from 'connected-react-router';
 
 const initialState = {};
 const enhancers = [];
@@ -12,3 +14,4 @@ export const store = createStore(
     initialState,
     composedEnhancers
 );
+export const history = createBrowserHistory();

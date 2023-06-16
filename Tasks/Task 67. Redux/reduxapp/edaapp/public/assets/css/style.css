@@ -166,3 +166,6 @@ img{
 .red{
     color: #f00;
 }
+.errorInput{
+    border-color: #f00;
+}

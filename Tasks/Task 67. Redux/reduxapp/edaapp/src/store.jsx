@@ -38,12 +38,6 @@ store.dispatch({
             favorite: false
         }
     ],
-    formError: {
-        image: "",
-        name: "",
-        price: "",
-        quantity: ""
-    },
     lastIdProduct: 1,
     
 });
